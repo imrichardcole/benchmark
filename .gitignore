@@ -66,3 +66,7 @@ CMakeSettings.json
 # Python build stuff
 dist/
 *.egg-info*
+
+# imrichardcole working files
+.venv/
+install/

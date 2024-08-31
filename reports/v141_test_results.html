@@ -1,0 +1,3788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v141_tests.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : v141_tests.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>benchmark
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7e49eae9-fb89-40b4-8465-4567b37f2acf">benchmark</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>spec_arg
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#9d8a4229-99ef-474f-ade4-69cbaa4d431b">spec_arg</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>spec_arg_verbosity
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#ea1f8772-b83c-4de2-a196-e353adfbe710">spec_arg_verbosity</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>benchmark_setup_teardown
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#947c705a-02c6-455c-8009-9dc3fc97a4e2">benchmark_setup_teardown</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>min_time_flag_time
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#6d03ce49-7eb3-41f2-bcdf-e0c479115ba9">min_time_flag_time</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>min_time_flag_iters
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#eb7a40c6-92f3-4c63-9cb8-7943a45af9a2">min_time_flag_iters</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_simple
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#ebbdd72e-0060-4193-95eb-3ec73a142ebc">filter_simple</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_simple_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c2c4fef4-1ed0-44a5-adb8-cb1834cf8b62">filter_simple_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_simple_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#d44b5b98-2282-4dc6-9af2-1c74007f88be">filter_simple_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_simple_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#11a9aea1-90cd-4443-b211-2b9515b44dc0">filter_simple_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_suffix
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#8fdfd397-c567-4df1-9aed-1f3b4a853510">filter_suffix</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_suffix_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#5b1f7bad-22fb-4823-a04b-9d01ff98a6b6">filter_suffix_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_suffix_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0843233f-4de7-4c96-9dbc-2868c4b705c9">filter_suffix_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_suffix_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#8900d79e-09e7-4e2f-b7ae-3cd52495ea2c">filter_suffix_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_all
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#9f39b328-94c8-422e-82a4-399cccc604de">filter_regex_all</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_all_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#09243994-a440-43a4-83f7-dec746bafb3f">filter_regex_all_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_all_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#03ee4421-9c03-4c42-a64d-e82851d4bb38">filter_regex_all_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_all_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#b9939d50-74f9-4909-8534-ef9a1fee4a4b">filter_regex_all_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_blank
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f219be6f-9482-4b64-9f6b-7701f9ef5c75">filter_regex_blank</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_blank_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#86739996-29e2-48fd-9aed-d7e95748d4a6">filter_regex_blank_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_blank_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#33588d05-9500-4945-aa0c-dd18cf6bb6c3">filter_regex_blank_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_blank_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#5f112dab-82c1-4641-8570-08c879830eb3">filter_regex_blank_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_none
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#fa4cd9a8-6373-490e-aa39-e1c8513dc997">filter_regex_none</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_none_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#4e5c38b9-100d-46cf-8b2e-96a744bfb2aa">filter_regex_none_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_none_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#67740953-601e-4bcd-9494-a526498bdc6d">filter_regex_none_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_none_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#ff1cc408-cb42-4b5d-8dfe-0deed82c6e2c">filter_regex_none_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_wildcard
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#26155cba-eb71-437e-a6ed-79ea0c33ed4a">filter_regex_wildcard</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_wildcard_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#22785465-c442-4a87-8648-b568511399dc">filter_regex_wildcard_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_wildcard_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#ce4e4bdb-2de4-4513-abc3-98e94844345d">filter_regex_wildcard_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_wildcard_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#8fdee037-7d22-46aa-94a3-a0bd0b5d06d6">filter_regex_wildcard_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#cf65500b-2d64-4f1a-b30a-bb292f5c3580">filter_regex_begin</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f027fc91-601d-434e-8e95-331e5458515e">filter_regex_begin_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#4b64db8f-5d20-46d9-8e4d-79f9e6b4b1c8">filter_regex_begin_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f52c4d5f-3a51-48f9-b7be-2c662a3ae32b">filter_regex_begin_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin2
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#b8483b03-53d6-40fe-b603-87757541381d">filter_regex_begin2</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin2_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#903c76a1-d55e-4952-af98-4cff5dabda14">filter_regex_begin2_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin2_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#be47613b-38b1-4048-a8f9-869e89b00333">filter_regex_begin2_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_begin2_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0de82a79-ced0-4e0c-98ad-94f0e3e19b99">filter_regex_begin2_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_end
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#53c596cd-9a77-4200-aad2-ca396d5cb673">filter_regex_end</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_end_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#6ed6ca84-7121-44f9-91ad-87cab640f67b">filter_regex_end_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_end_negative
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#e9c5b5a0-7b49-4750-9a12-188e686cf51c">filter_regex_end_negative</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>filter_regex_end_negative_list_only
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#073fd19e-deca-4b01-bf6d-4dca84053124">filter_regex_end_negative_list_only</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>options_benchmarks
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#68abfb8a-aa4f-4965-b475-4174761dec66">options_benchmarks</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>basic_benchmark
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7751a672-d063-473e-b4cf-508c40bca5a0">basic_benchmark</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>repetitions_benchmark
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#62764aa0-f5d4-4668-9978-0e047f736c85">repetitions_benchmark</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>diagnostics_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#28b19abe-3337-4b1d-98b6-4bd89dae6365">diagnostics_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>skip_with_error_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#4049e69e-7db0-468a-85ef-42e9084b9c49">skip_with_error_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>donotoptimize_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#8d443d42-bca8-4a5a-a5e5-67e3c09da2d2">donotoptimize_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>fixture_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c5791f31-40fb-487a-aeaa-94818b5071ab">fixture_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>register_benchmark_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0891b9b2-89b3-4a8d-bc2e-d84a4e7b7844">register_benchmark_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>map_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f677d3c2-3c6f-4789-b745-ad845ab829da">map_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>multiple_ranges_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f6769dbf-404e-4927-a34c-939ff5c0892d">multiple_ranges_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>args_product_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#9a08e4fa-f54a-4b2a-8e8f-e33aec663a6d">args_product_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>link_main_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#628338b1-d909-462a-9840-f5abaa76beb0">link_main_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>reporter_output_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#95ccc2ab-7c9e-4148-97f6-69ac8060c5e0">reporter_output_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>templated_fixture_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7b77f2f2-3ba9-4b99-8a01-e061b50a0488">templated_fixture_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>user_counters_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#e435f170-c913-4235-8393-775c6ca068ff">user_counters_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>perf_counters_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#b2f72efb-202e-4cb8-9dff-ebe46ef4d4be">perf_counters_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>internal_threading_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#3d3efa3b-2904-4808-ae7d-59fcbde40bed">internal_threading_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>report_aggregates_only_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c9fd155c-0ddb-41c3-b59f-df9ee24d24ba">report_aggregates_only_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>display_aggregates_only_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#dd48ed66-c3d3-4a53-bacd-f4a683021361">display_aggregates_only_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>user_counters_tabular_test
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#3e12cd64-245e-44c8-a53d-df4b8894ead1">user_counters_tabular_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>user_counters_thousands_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0282c46e-875a-4bee-85cd-e3ff0405b9ff">user_counters_thousands_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>memory_manager_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#f5ee3ef4-8752-4466-92aa-f0ac865e94d2">memory_manager_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>profiler_manager_test
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#2da16b86-b9aa-42b1-be85-1555b71a7fac">profiler_manager_test</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>complexity_benchmark
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c91e8aea-8c32-4771-9621-2c7e01aea706">complexity_benchmark</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    <li><a href="#3e12cd64-245e-44c8-a53d-df4b8894ead1">[F] user_counters_tabular_test : user_counters_tabular_test</a></li>
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: (empty)</h2>
+        <a id="ec7f373a-b779-4223-9d56-3b01635536a1"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>12.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>66</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>1</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>benchmark</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7e49eae9-fb89-40b4-8465-4567b37f2acf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>benchmark</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>7.219 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:04+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/benchmark_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------------
+Benchmark                                         Time             CPU   Iterations
+-----------------------------------------------------------------------------------
+BM_Factorial                                   16.3 ns         31.2 ns      1000000 40320
+BM_Factorial/real_time                         19.5 ns         13.8 ns      1133695 40320
+BM_CalculatePiRange/1                          5.24 ns         6.25 ns     10000000 0
+BM_CalculatePiRange/8                          13.2 ns         15.6 ns      1000000 3.28374
+BM_CalculatePiRange/64                          112 ns          109 ns      1000000 3.15746
+BM_CalculatePiRange/512                         801 ns        15625 n...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>spec_arg</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9d8a4229-99ef-474f-ade4-69cbaa4d431b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>spec_arg</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.883 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:04+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/spec_arg_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Chosen       0.972 ns        0.879 ns    746666667
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>spec_arg_verbosity</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ea1f8772-b83c-4de2-a196-e353adfbe710"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>spec_arg_verbosity</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.093 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>benchmark_setup_teardown</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="947c705a-02c6-455c-8009-9dc3fc97a4e2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>benchmark_setup_teardown</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.057 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:05+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/benchmark_setup_teardown_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------------------------------
+Benchmark                                                           Time             CPU   Iterations
+-----------------------------------------------------------------------------------------------------
+BM_with_setup/1/iterations:100                                   35.0 ns        0.000 ns          100
+BM_with_setup/3/iterations:100                                   11.0 ns        0.000 ns          100
+BM_with_setup/5/iterations:100                                   10.0 ns        0.000 ns          100
+BM_with_setup/7/iterations:100                                   9.00 ns        0.000 ns          100
+BM_concurrent/iterations:100/threads:5    ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>min_time_flag_time</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6d03ce49-7eb3-41f2-bcdf-e0c479115ba9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>min_time_flag_time</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>12.598 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:05+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/benchmark_min_time_flag_time_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-- LOG(0): Value passed to --benchmark_min_time should have a suffix. Eg., `30s` for 30-seconds.-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_MyBench      0.903 ns        0.882 ns   5688888889
+2024-08-31T08:28:11+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/benchmark_min_time_flag_time_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-- LOG(0): Value passed to --benchmark_min_time should have a suffix. Eg., `30s` for 30-seconds.-----------------------------------------------------
+Benchmark         ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>min_time_flag_iters</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="eb7a40c6-92f3-4c63-9cb8-7943a45af9a2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>min_time_flag_iters</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:05+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/benchmark_min_time_flag_iters_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_MyBench       5425 ns        0.000 ns            4
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_simple</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ebbdd72e-0060-4193-95eb-3ec73a142ebc"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_simple</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.117 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:05+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Foo           1.34 ns         1.56 ns     10000000
+BM_FooBar        1.63 ns         1.56 ns     10000000
+BM_FooBa         1.65 ns         3.12 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_simple_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c2c4fef4-1ed0-44a5-adb8-cb1834cf8b62"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_simple_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.013 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_Foo
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_simple_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d44b5b98-2282-4dc6-9af2-1c74007f88be"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_simple_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.147 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix         1.08 ns         1.09 ns    100000000
+BM_Bar          0.825 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_simple_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="11a9aea1-90cd-4443-b211-2b9515b44dc0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_simple_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Bar
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_suffix</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8fdfd397-c567-4df1-9aed-1f3b4a853510"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_suffix</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.18 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Foo          0.872 ns         1.56 ns     10000000
+BM_Bar           1.08 ns         1.09 ns    100000000
+BM_FooBar        1.56 ns         1.56 ns     10000000
+BM_FooBa         1.84 ns         3.12 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_suffix_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5b1f7bad-22fb-4823-a04b-9d01ff98a6b6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_suffix_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.011 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_suffix_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0843233f-4de7-4c96-9dbc-2868c4b705c9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_suffix_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.979 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_suffix_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8900d79e-09e7-4e2f-b7ae-3cd52495ea2c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_suffix_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.016 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_all</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9f39b328-94c8-422e-82a4-399cccc604de"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_all</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.255 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.900 ns         1.56 ns     10000000
+BM_Foo          0.877 ns         1.56 ns     10000000
+BM_Bar           1.07 ns         1.09 ns    100000000
+BM_FooBar       0.831 ns         1.56 ns     10000000
+BM_FooBa        0.805 ns        0.938 ns    100000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_all_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="09243994-a440-43a4-83f7-dec746bafb3f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_all_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.012 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_all_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="03ee4421-9c03-4c42-a64d-e82851d4bb38"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_all_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.011 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: -.*
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_all_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b9939d50-74f9-4909-8534-ef9a1fee4a4b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_all_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.015 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: -.*
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_blank</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f219be6f-9482-4b64-9f6b-7701f9ef5c75"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_blank</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.362 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.870 ns        0.938 ns    100000000
+BM_Foo          0.998 ns         1.09 ns    100000000
+BM_Bar           1.32 ns         1.56 ns     10000000
+BM_FooBar        1.03 ns         1.09 ns    100000000
+BM_FooBa        0.749 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_blank_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="86739996-29e2-48fd-9aed-d7e95748d4a6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_blank_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.012 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_blank_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="33588d05-9500-4945-aa0c-dd18cf6bb6c3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_blank_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.013 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: -
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_blank_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5f112dab-82c1-4641-8570-08c879830eb3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_blank_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.015 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: -
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_none</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fa4cd9a8-6373-490e-aa39-e1c8513dc997"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_none</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.014 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: monkey
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_none_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4e5c38b9-100d-46cf-8b2e-96a744bfb2aa"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_none_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.014 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Failed to match any benchmarks against regex: monkey
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_none_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="67740953-601e-4bcd-9494-a526498bdc6d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_none_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.239 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.856 ns         1.56 ns     10000000
+BM_Foo          0.911 ns        0.938 ns    100000000
+BM_Bar          0.865 ns         1.56 ns     10000000
+BM_FooBar       0.941 ns         1.56 ns     10000000
+BM_FooBa        0.774 ns        0.781 ns    100000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_none_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ff1cc408-cb42-4b5d-8dfe-0deed82c6e2c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_none_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.012 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_wildcard</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="26155cba-eb71-437e-a6ed-79ea0c33ed4a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_wildcard</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.125 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Foo           1.26 ns         1.56 ns     10000000
+BM_FooBar       0.812 ns        0.781 ns    100000000
+BM_FooBa         1.15 ns         15.6 ns      1000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_wildcard_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="22785465-c442-4a87-8648-b568511399dc"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_wildcard_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.013 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_Foo
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_wildcard_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ce4e4bdb-2de4-4513-abc3-98e94844345d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_wildcard_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.043 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix         1.42 ns         1.56 ns     10000000
+BM_Bar           1.06 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_wildcard_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8fdee037-7d22-46aa-94a3-a0bd0b5d06d6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_wildcard_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Bar
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cf65500b-2d64-4f1a-b30a-bb292f5c3580"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.373 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Foo           1.20 ns         1.56 ns     10000000
+BM_Bar           1.15 ns         1.25 ns    100000000
+BM_FooBar       0.811 ns        0.938 ns    100000000
+BM_FooBa         1.16 ns         1.25 ns    100000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f027fc91-601d-434e-8e95-331e5458515e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4b64db8f-5d20-46d9-8e4d-79f9e6b4b1c8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.029 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.815 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f52c4d5f-3a51-48f9-b7be-2c662a3ae32b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.015 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin2</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b8483b03-53d6-40fe-b603-87757541381d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin2</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.027 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:06+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.860 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin2_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="903c76a1-d55e-4952-af98-4cff5dabda14"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin2_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.015 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin2_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="be47613b-38b1-4048-a8f9-869e89b00333"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin2_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.136 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:07+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_Foo          0.993 ns         1.56 ns     10000000
+BM_Bar          0.868 ns         1.56 ns     10000000
+BM_FooBar       0.786 ns        0.781 ns    100000000
+BM_FooBa        0.801 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_begin2_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0de82a79-ced0-4e0c-98ad-94f0e3e19b99"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_begin2_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.011 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_Foo
+BM_Bar
+BM_FooBar
+BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_end</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="53c596cd-9a77-4200-aad2-ca396d5cb673"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_end</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.031 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:07+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_FooBa        0.950 ns         1.56 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_end_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6ed6ca84-7121-44f9-91ad-87cab640f67b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_end_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.016 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>BM_FooBa
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_end_negative</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e9c5b5a0-7b49-4750-9a12-188e686cf51c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_end_negative</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.154 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:07+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/filter_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+NoPrefix        0.890 ns         1.56 ns     10000000
+BM_Foo          0.814 ns         1.56 ns     10000000
+BM_Bar           1.18 ns         1.56 ns     10000000
+BM_FooBar       0.924 ns        0.938 ns    100000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>filter_regex_end_negative_list_only</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="073fd19e-deca-4b01-bf6d-4dca84053124"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>filter_regex_end_negative_list_only</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.012 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>NoPrefix
+BM_Foo
+BM_Bar
+BM_FooBar
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>options_benchmarks</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="68abfb8a-aa4f-4965-b475-4174761dec66"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>options_benchmarks</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>7.965 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:07+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/options_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------------------------
+Benchmark                                                     Time             CPU   Iterations
+-----------------------------------------------------------------------------------------------
+BM_basic                                                  0.885 ns        0.938 ns    100000000
+BM_basic/42                                               0.988 ns         1.56 ns     10000000
+BM_basic_slow/10                                       17441450 ns        0.000 ns           10
+BM_basic_slow/100                                        110948 us        0.000 us            1
+BM_basic_slow/1000                                         1008 ms        0.000 ms            1
+BM_ba...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>basic_benchmark</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7751a672-d063-473e-b4cf-508c40bca5a0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>basic_benchmark</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.882 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:07+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/basic_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------------------
+Benchmark                                               Time             CPU   Iterations
+-----------------------------------------------------------------------------------------
+BM_empty                                             3.85 ns         15.6 ns      1000000
+BM_empty/threads:12                                  61.5 ns        0.000 ns      1200000
+BM_spin_empty/8                                      22.9 ns          156 ns       100000
+BM_spin_empty/512                                    1649 ns         1562 ns        10000
+BM_spin_empty/8192                                  18659 ns        15625 ns         1000
+BM_spin_empty/8/threads:12                            5...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>repetitions_benchmark</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="62764aa0-f5d4-4668-9978-0e047f736c85"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>repetitions_benchmark</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.108 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:09+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/repetitions_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+----------------------------------------------------------------------------------
+Benchmark                                        Time             CPU   Iterations
+----------------------------------------------------------------------------------
+BM_ExplicitRepetitions/repeats:2              1.12 ns         1.56 ns     10000000
+BM_ExplicitRepetitions/repeats:2              1.02 ns        0.000 ns     10000000
+BM_ExplicitRepetitions/repeats:2_mean         1.07 ns        0.781 ns            2
+BM_ExplicitRepetitions/repeats:2_median       1.07 ns        0.781 ns            2
+BM_ExplicitRepetitions/repeats:2_stddev      0.071 ns         1.10 ns  ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>diagnostics_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="28b19abe-3337-4b1d-98b6-4bd89dae6365"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>diagnostics_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.13 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:09+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/diagnostics_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+--------------------------------------------------------------------------
+Benchmark                                Time             CPU   Iterations
+--------------------------------------------------------------------------
+BM_diagnostic_test                    3.50 ns         3.12 ns     10000000
+BM_diagnostic_test_keep_running       2.90 ns         3.12 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>skip_with_error_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4049e69e-7db0-468a-85ef-42e9084b9c49"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>skip_with_error_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.44 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:09+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/skip_with_error_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+--------------------------------------------------------------------------------------------
+Benchmark                                                  Time             CPU   Iterations
+--------------------------------------------------------------------------------------------
+BM_error_no_running                               ERROR OCCURRED: &#39;error message&#39;
+BM_error_before_running                           ERROR OCCURRED: &#39;error message&#39;
+BM_error_before_running_batch                     ERROR OCCURRED: &#39;error message&#39;
+BM_error_before_running_range_for                 ERROR OCCURRED: &#39;error message&#39;
+BM_error_during_running/1/threads:1               ERROR OCCURRED: &#39;error message&#39;
+BM_error_during_running/1/threads:2               ERROR OCCURRED: &#39;error mes...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>donotoptimize_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8d443d42-bca8-4a5a-a5e5-67e3c09da2d2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>donotoptimize_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.051 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>fixture_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c5791f31-40fb-487a-aeaa-94818b5071ab"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>fixture_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.153 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:10+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/fixture_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+----------------------------------------------------------------------
+Benchmark                            Time             CPU   Iterations
+----------------------------------------------------------------------
+MyFixture/Foo                    0.804 ns         1.56 ns     10000000
+MyFixture/Bar/42                  1.53 ns         1.56 ns     10000000 items_per_second=2.688k/s
+MyFixture/Bar/42/threads:12       3.27 ns         3.12 ns    120000000 items_per_second=1.344k/s
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>register_benchmark_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0891b9b2-89b3-4a8d-bc2e-d84a4e7b7844"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>register_benchmark_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.586 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:10+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/register_benchmark_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+--------------------------------------------------------------------------
+Benchmark                                Time             CPU   Iterations
+--------------------------------------------------------------------------
+BM_function                          0.776 ns         15.6 ns      1000000
+BM_function_manual_registration      0.995 ns         1.09 ns    100000000
+test1                                0.874 ns        0.938 ns    100000000 One
+test2                                0.894 ns        0.938 ns    100000000 Two
+test3                                0.817 ns         1.56 ns     10000000 Three
+custom_fixture                       0.775 ns        0.781 ns    100000000
+lambda_benchmark                     0.987 ns         1.56 ns     1000000...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>map_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f677d3c2-3c6f-4789-b745-ad845ab829da"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>map_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.815 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:10+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/map_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+---------------------------------------------------------------------------------
+Benchmark                       Time             CPU   Iterations UserCounters...
+---------------------------------------------------------------------------------
+BM_MapLookup/8               1982 ns         3125 ns        10000 items_per_second=2.56M/s
+BM_MapLookup/64              6813 ns         6250 ns        10000 items_per_second=10.24M/s
+BM_MapLookup/512            53290 ns        62500 ns         1000 items_per_second=8.192M/s
+BM_MapLookup/4096          568797 ns       625000 ns          100 items_per_second=6.5536M/s
+MapFixture/Lookup/8           423 ns          469 ns       100000 items_per_second=17.0667M/s
+MapFixture/Lookup/64         5550 ns        15625 ns         1000 ite...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>multiple_ranges_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f6769dbf-404e-4927-a34c-939ff5c0892d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>multiple_ranges_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.341 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:11+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/multiple_ranges_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------
+Benchmark                                   Time             CPU   Iterations
+-----------------------------------------------------------------------------
+MultipleRangesFixture/Empty/1/3/5        31.8 ns         31.2 ns      1000000
+MultipleRangesFixture/Empty/2/3/5        57.9 ns          156 ns       100000
+MultipleRangesFixture/Empty/1/4/5        40.2 ns         46.9 ns      1000000
+MultipleRangesFixture/Empty/2/4/5        88.2 ns         93.8 ns      1000000
+MultipleRangesFixture/Empty/1/7/5        81.6 ns          156 ns       100000
+MultipleRangesFixture/Empty/2/7/5         176 ns          156 ns       100000
+MultipleRangesFixture/Empty/1/3/8        55.5 ns         62.5 n...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>args_product_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9a08e4fa-f54a-4b2a-8e8f-e33aec663a6d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>args_product_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.585 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:12+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/args_product_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+------------------------------------------------------------------------------------
+Benchmark                                          Time             CPU   Iterations
+------------------------------------------------------------------------------------
+ArgsProductFixture/Empty/0/100/2000/30000       4.63 ns         4.69 ns     10000000
+ArgsProductFixture/Empty/1/15/3/8                589 ns          625 ns       100000
+ArgsProductFixture/Empty/2/15/3/8               1143 ns         1562 ns        10000
+ArgsProductFixture/Empty/1/15/7/8               1281 ns         1562 ns        10000
+ArgsProductFixture/Empty/2/15/7/8               2855 ns         3125 ns        10000
+ArgsProductFixture/Empty/1/15/10/8              2541 ns         3125 ns        10000
+Arg...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>link_main_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="628338b1-d909-462a-9840-f5abaa76beb0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>link_main_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.095 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:12+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/link_main_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_empty         3.41 ns         3.12 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>reporter_output_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="95ccc2ab-7c9e-4148-97f6-69ac8060c5e0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>reporter_output_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>2.18 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:12+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/reporter_output_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+--------------------------------------------------------------------------------------------------------
+Benchmark                                                              Time             CPU   Iterations
+--------------------------------------------------------------------------------------------------------
+BM_basic                                                           0.898 ns        0.938 ns    100000000
+BM_bytes_per_second                                                 3.55 ns         4.69 ns     10000000 bytes_per_second=21.3333/s
+BM_items_per_second                                                 3.60 ns         3.12 ns     ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>templated_fixture_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7b77f2f2-3ba9-4b99-8a01-e061b50a0488"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>templated_fixture_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.122 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>2024-08-31T08:28:12+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/templated_fixture_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+----------------------------------------------------------------
+Benchmark                      Time             CPU   Iterations
+----------------------------------------------------------------
+MyFixture&lt;int&gt;/Foo          2.02 ns         1.56 ns     10000000
+MyFixture&lt;double&gt;/Bar       3.56 ns         4.69 ns     10000000
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>user_counters_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e435f170-c913-4235-8393-775c6ca068ff"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>user_counters_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.683 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:13+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/user_counters_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+------------------------------------------------------------------------------------------------
+Benchmark                                      Time             CPU   Iterations UserCounters...
+------------------------------------------------------------------------------------------------
+BM_Counters_Simple                         0.907 ns         1.56 ns     10000000 bar=20M foo=1
+BM_Counters_WithBytesAndItemsPSec           3.28 ns         3.12 ns     10000000 bar=8 bytes_per_second=11.375Ki/s foo=1 items_per_second=4.8k/s
+BM_Counters_Rate                            3.16 ns         3.12 ns     10000000 bar=64/s foo=32/s
+BM_Invert           ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>perf_counters_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b2f72efb-202e-4cb8-9dff-ebe46ef4d4be"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>perf_counters_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.059 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>internal_threading_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3d3efa3b-2904-4808-ae7d-59fcbde40bed"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>internal_threading_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.888 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:13+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/internal_threading_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+---------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                                                             Time             CPU   Iterations UserCounters...
+---------------------------------------------------------------------------------------------------------------------------------------
+BM_MainThread/iterations:1/threads:1                                           50005000 ns     46875000 ns            1 invtime=21.3333/s
+BM_MainThread/iterations:1/real_time/threads:1                                 50001600 ns     4687...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>report_aggregates_only_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c9fd155c-0ddb-41c3-b59f-df9ee24d24ba"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>report_aggregates_only_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.36 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Will be using this as the tmp file: test.2e4434
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/report_aggregates_only_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+----------------------------------------------------------------------------
+Benchmark                                  Time             CPU   Iterations
+----------------------------------------------------------------------------
+BM_SummaryRepeat/repeats:3_mean        0.883 ns        0.885 ns            3
+BM_SummaryRepeat/repeats:3_median      0.800 ns        0.937 ns            3
+BM_SummaryRepeat/repeats:3_stddev      0.147 ns        0.090 ns            3
+BM_SummaryRepeat/repeats:3_cv          16.66 %         10.19 %             3
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>display_aggregates_only_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="dd48ed66-c3d3-4a53-bacd-f4a683021361"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>display_aggregates_only_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.175 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Will be using this as the tmp file: test.88f077
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/display_aggregates_only_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+----------------------------------------------------------------------------
+Benchmark                                  Time             CPU   Iterations
+----------------------------------------------------------------------------
+BM_SummaryRepeat/repeats:3_mean        0.885 ns         1.04 ns            3
+BM_SummaryRepeat/repeats:3_median      0.904 ns         1.56 ns            3
+BM_SummaryRepeat/repeats:3_stddev      0.042 ns        0.902 ns            3
+BM_SummaryRepeat/repeats:3_cv           4.78 %         86.60 %             3
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>user_counters_tabular_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="3e12cd64-245e-44c8-a53d-df4b8894ead1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>user_counters_tabular_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>1.302 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>Exit code 0xc0000409 </td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>failed</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/user_counters_tabular_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Benchmark                                               Time             CPU   Iterations        Bar        Bat        Baz        Foo       Frob        Lob
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+BM_Counters_Tabular/repeats:2/threads:1              4.77 ns         4.69 ns     10000000          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:1              4.66 ns         4.69 ns     10000000          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:1_mean         4.71 ns         4.69 ns            2          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:1_median       4.71 ns         4.69 ns            2          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:1_stddev      0.076 ns        0.000 ns            2          0          0          0          0          0          0
+BM_Counters_Tabular/repeats:2/threads:1_cv           1.62 %          0.00 %             2      0.00%      0.00%      0.00%      0.00%      0.00%      0.00%
+BM_Counters_Tabular/repeats:2/threads:2              8.67 ns         9.38 ns     20000000          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:2              9.58 ns         9.38 ns     20000000          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:2_mean         9.12 ns         9.38 ns            2          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:2_median       9.12 ns         9.38 ns            2          2          8          4          1         16         32
+BM_Counters_Tabular/repeats:2/threads:2_stddev      0.638 ns        0.000 ns            2          0          0          0          0          0          0
+BM_Counters_Tabular/repeats:2/threads:2_cv           6.99 %          0.00 %             2      0.00%      0.00%      0.00%      0.00%      0.00%      0.00%
+BM_CounterRates_Tabular/threads:1                    3.40 ns          156 ns       100000      128/s      512/s      256/s       64/s   1.024k/s   2.048k/s
+BM_CounterRates_Tabular/threads:2                    7.54 ns         8.59 ns     20000000  11.6364/s  46.5455/s  23.2727/s  5.81818/s  93.0909/s  186.182/s
+BM_CounterRates_Tabular/threads:4                    16.1 ns         15.6 ns      4000000       32/s      128/s       64/s       16/s      256/s      512/s
+BM_CounterRates_Tabular/threads:8                    34.6 ns         37.1 ns      8000000  6.73684/s  26.9474/s  13.4737/s  3.36842/s  53.8947/s  107.789/s
+BM_CounterRates_Tabular/threads:16                   49.1 ns        0.000 ns      1600000      inf/s      inf/s      inf/s      inf/s      inf/s      inf/s
+--------------------------------------------------------------------------------------------------------------------------
+Benchmark                                               Time             CPU   Iterations        Bar        Baz        Foo
+--------------------------------------------------------------------------------------------------------------------------
+BM_CounterSet0_Tabular/threads:1                    0.796 ns         1.56 ns     10000000         20         40         10
+BM_CounterSet0_Tabular/threads:2                    0.767 ns        0.781 ns    200000000         20         40         10
+BM_CounterSet0_Tabular/threads:4                    0.814 ns        0.938 ns    400000000         20         40         10
+BM_CounterSet0_Tabular/threads:8                     1.54 ns        0.000 ns     80000000         20         40         10
+BM_CounterSet0_Tabular/threads:16                    1.56 ns         1.56 ns    160000000         20         40    C:\sandbox\work\oss\benchmark\test\output_test_helper.cc:116: internal::`anonymous-namespace&#39;::CheckCase: Check `TC.match_rule != MR_Next&#39; failed. Expected line &#34;BM_CounterRates_Tabular/threads:16                   49.1 ns        0.000 ns      1600000      inf/s      inf/s      inf/s      inf/s      inf/s      inf/s&#34; to match regex &#34;^BM_CounterRates_Tabular/threads:%int %console_report [ ]*%hrfloat/s [ ]*%hrfloat/s [ ]*%hrfloat/s [ ]*%hrfloat/s [ ]*%hrfloat/s [ ]*%hrfloat/s$&#34;
+    actual regex string &#34;^BM_CounterRates_Tabular/threads:[ ]*[0-9]+ [ ]*([0-9]+[.])?[0-9]+[ ]+ns [ ]*([0-9]+[.])?[0-9]+[ ]+ns [ ]*[0-9]+ [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s [ ]*[0-9]*[.]?[0-9]+([eE][-+][0-9]+)?[kKMGTPEZYmunpfazy]?i?/s$&#34;
+    started matching near: BM_CounterRates_Tabular/threads:16                   49.1 ns        0.000 ns      1600000      inf/s      inf/s      inf/s      inf/s      inf/s      inf/s
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>user_counters_thousands_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0282c46e-875a-4bee-85cd-e3ff0405b9ff"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>user_counters_thousands_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.117 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/user_counters_thousands_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-------------------------------------------------------------------------------------------------
+Benchmark                                       Time             CPU   Iterations UserCounters...
+-------------------------------------------------------------------------------------------------
+BM_Counters_Thousands/repeats:2              1.66 ns         1.56 ns     10000000 t0_1000000DefaultBase=1M t1_1000000Base1000=1M t2_1000000Base1024=976.562Ki t3_1048576Base1000=1.04858M t4_1048576Base1024=1Mi
+BM_Counters_Thousands/repeats:2              1.19 ns         1.56 ns     10000000 t0_1000000DefaultBase=1M t1_1000000Base1000=1M t2_10000...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>memory_manager_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f5ee3ef4-8752-4466-92aa-f0ac865e94d2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>memory_manager_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.175 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/memory_manager_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_empty         4.65 ns         4.69 ns     10000000
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  &#34;context&#34;: {
+    &#34;date&#34;: &#34;2024-08-31T08:28:15+01:00&#34;,
+    &#34;host_name&#34;: &#34;RLABLW001&#34;,
+    &#34;executable&#34;: &#34;C:/sandbox/work/oss/benchmark/build/v141/test/Release/memory_manager_test.exe&#34;,
+    &#34;num_cpus&#34;: 12,
+    &#34;mhz_per_cpu&#34;: 2400,
+    &#34;caches&#34;: [
+      {
+        &#34;type&#34;: &#34;Data&#34;,
+        &#34;level&#34;: 1,
+        &#34;size&#34;: 32768,
+        &#34;num_sharing&#34;: ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>profiler_manager_test</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2da16b86-b9aa-42b1-be85-1555b71a7fac"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>profiler_manager_test</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.106 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/profiler_manager_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+-----------------------------------------------------
+Benchmark           Time             CPU   Iterations
+-----------------------------------------------------
+BM_empty         3.71 ns         4.69 ns     10000000
+
+----------------------------
+Testing JSONReporter Output
+----------------------------
+{
+  &#34;context&#34;: {
+    &#34;date&#34;: &#34;2024-08-31T08:28:15+01:00&#34;,
+    &#34;host_name&#34;: &#34;RLABLW001&#34;,
+    &#34;executable&#34;: &#34;C:/sandbox/work/oss/benchmark/build/v141/test/Release/profiler_manager_test.exe&#34;,
+    &#34;num_cpus&#34;: 12,
+    &#34;mhz_per_cpu&#34;: 2400,
+    &#34;caches&#34;: [
+      {
+        &#34;type&#34;: &#34;Data&#34;,
+        &#34;level&#34;: 1,
+        &#34;size&#34;: 32768,
+        &#34;num_sharin...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>complexity_benchmark</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c91e8aea-8c32-4771-9621-2c7e01aea706"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>complexity_benchmark</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.365 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>Running benchmarks...
+-------------------------------
+Testing ConsoleReporter Output
+-------------------------------
+2024-08-31T08:28:15+01:00
+Running C:/sandbox/work/oss/benchmark/build/v141/test/Release/complexity_test.exe
+Run on (12 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 256 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+------------------------------------------------------------------------------------------------
+Benchmark                                                      Time             CPU   Iterations
+------------------------------------------------------------------------------------------------
+BM_Complexity_O1/1/manual_time                              42.0 ns        0.000 ns      1000000
+BM_Complexity_O1/8/manual_time                              42.0 ns         15.6 ns      1000000
+BM_Complexity_O1/64/manual_time                             42.0 ns         15.6 ns      1000000
+BM_Complexity_O1/512/manual_time                            42.0 ns    ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
